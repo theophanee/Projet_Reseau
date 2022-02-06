@@ -1,0 +1,48 @@
+Les trames sont représentées par des List de String (Trame.java), on y 
+trouve quelques méthodes pour utiliser les trames.
+
+La classe MultiTrame permet de contenir plusieurs trames dans une List, avec encore des méthodes d'utilisation.
+
+La classe Tools contient toutes les méthodes pour transformer les octets en int ou String, pour faire les conversions
+hexa->binaire / hexa->decimal etc, écrire des adresses ou une chaîne ascii.
+
+Maintenant que nous avons ces classes, nous pouvons commencer à coder les différentes couches.
+
+=========================================================================================================================
+Les Couches :
+
+La classe Ethernet va donc représentée la couche 2, elle prend une trame dans son initilisation pour
+initialiser ses différents paramètres, vérifie que la trame est correcte, détermine le type etc.
+
+La classe IP représente la couche 3 et fonctionne comme la classe Ethernet : Trame en paramètre d'initialisation,
+détermine le protocole et ses attributs.
+
+La classe UDP représente la couche 4, elle prend en paramètre l'IP et la Trame. Elle vérifie d'abord que le protocole de 
+l'IP est bien UDP et initialise donc ses attributs avec la trame.
+
+Pour la couche 7, nous avons créer les deux classes correspondantes : DNS et DHCP.
+DHCP prend une trame en paramètre et va initialiser ses attributs en vérifiant si il y a des options, et
+dans ce cas va faire un switch case pour déterminer quelle option et quels attributs. Si l'options n'est pa coder,
+on l'affiche en spécifiant qu'elle ne l'est pas et on passe à l'option suivante grâce au length de celle-ci.
+
+DNS fonctionne comme DHCP : Trame en paramètre, initialise ses attributs etc. DNS trouve quelles sections sont présentes 
+dans la trame
+et les codes si nécessaires.
+
+La classe Couche7 va enveloppée ces deux classes, elle vérifie avec UDP quel cas est recherchée et le lance. Sinon, 
+affiche qu'il n'est pas pris en charge.
+=========================================================================================================================
+
+Frag est la classe d'analyse du fichier contenant la trame. Il prendra en paramètre un nom de fichier : le nom du fichier 
+contenant la trame.
+Cette classe contient 2 méthodes : Parse et Analyser.
+/*-----------------------------------------------------------------------------------------------------------------------*/
+Parse() : lit le fichier avec la ou les trames et vérifie si il n'y a pas d'erreurs, vérifie les offsets, les octets etc, 
+tout en créant la Trame associée. 
+
+Analyser(Fichier) : Parcourt la ou les trames du précédent fichier et va écrire dans le Fichier en paramètre les 
+différentes couches tout en vérifiant que l'on en prend bien en charge celles demandées sinon arrête l'écriture de la 
+trame. Cette méthode découpe la trame entre chaque couches pour faciliter sa lecture.
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+Enfin ,la classe ProjetMain est la classe Main qui lance l'analyse du fichier.
