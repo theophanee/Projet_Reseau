@@ -1,0 +1,275 @@
+
+===========================================================
+
+>Frame 1:  83 bytes (664 bits)
+>Ethernet II 
+	Destination:  (00:09:0f:09:00:02)
+	Source:  (40:9f:38:f0:91:81)
+	Type: IPv4 (0x0800)
+>Internet Protocol Version 4
+	0100  .... = Version: 4
+	.... 0101  = Header Length: 20 bytes (5)
+	Differientiated Services Filed: 0x00
+	Total length: 69
+	Identification: 0xb5bb (46523)
+	Flags: 0x00
+	Time To Live: 128
+	Protocol: UDP (17)
+	Header Checksum : 0xe944
+	Source Address: 10.64.10.74
+	Destination Address: 134.157.0.129
+>User Datagram Protocol
+	Source Port :65521
+	Destination Port :53
+	Length: 49
+	Checksum: 0x9ff6
+>Domain Name System
+	Transaction ID: 0xceb9
+	>Flasg: 0x0100
+		0... .... .... .... = Response: Message is a query
+		.000 0... .... .... = Opcode: Standard query (0)
+		.... ..0. .... .... = Truncated: Message is not truncated
+		.... ...1 .... .... = Recursion desired: Do query recursively
+		.... .... .0.. .... = Z: reserved (0)
+		.... .... ...0 .... = Non-authenticated data: Unacceptable
+	Questions: 1
+	Answer RRs: 0
+	Authority RRs: 0
+	Additional RRs: 0
+	>Queries
+		>ctldl.windowsupdate.com
+			Name: ctldl.windowsupdate.com
+			[Name Length: 23]
+			[Label Count: 3]
+			Type: (1)
+			Class: (0x0001)
+
+===========================================================
+
+>Frame 2:  83 bytes (664 bits)
+>Ethernet II 
+	Destination:  (00:09:0f:09:00:02)
+	Source:  (40:9f:38:f0:91:81)
+	Type: IPv4 (0x0800)
+>Internet Protocol Version 4
+	0100  .... = Version: 4
+	.... 0101  = Header Length: 20 bytes (5)
+	Differientiated Services Filed: 0x00
+	Total length: 69
+	Identification: 0xb5bb (46523)
+	Flags: 0x00
+	Time To Live: 128
+	Protocol: UDP (17)
+	Header Checksum : 0xe944
+	Source Address: 10.64.10.74
+	Destination Address: 134.157.0.129
+>User Datagram Protocol
+	Source Port :65521
+	Destination Port :53
+	Length: 49
+	Checksum: 0x9ff6
+>Domain Name System
+	Transaction ID: 0xceb9
+	>Flasg: 0x0100
+		0... .... .... .... = Response: Message is a query
+		.000 0... .... .... = Opcode: Standard query (0)
+		.... ..0. .... .... = Truncated: Message is not truncated
+		.... ...1 .... .... = Recursion desired: Do query recursively
+		.... .... .0.. .... = Z: reserved (0)
+		.... .... ...0 .... = Non-authenticated data: Unacceptable
+	Questions: 1
+	Answer RRs: 0
+	Authority RRs: 0
+	Additional RRs: 0
+	>Queries
+		>ctldl.windowsupdate.com
+			Name: ctldl.windowsupdate.com
+			[Name Length: 23]
+			[Label Count: 3]
+			Type: (1)
+			Class: (0x0001)
+
+===========================================================
+
+>Frame 3:  547 bytes (4376 bits)
+>Ethernet II 
+	Destination:  (40:9f:38:f0:91:81)
+	Source:  (00:09:0f:09:00:02)
+	Type: IPv4 (0x0800)
+>Internet Protocol Version 4
+	0100  .... = Version: 4
+	.... 0101  = Header Length: 20 bytes (5)
+	Differientiated Services Filed: 0x00
+	Total length: 533
+	Identification: 0x00f1 (241)
+	Flags: 0x00
+	Time To Live: 62
+	Protocol: UDP (17)
+	Header Checksum : 0xde3f
+	Source Address: 134.157.0.129
+	Destination Address: 10.64.10.74
+>User Datagram Protocol
+	Source Port :53
+	Destination Port :65521
+	Length: 513
+	Checksum: 0xa101
+>Domain Name System
+	Transaction ID: 0xceb9
+	>Flasg: 0x8180
+		1... .... .... .... = Response: Message is a response
+		.000 0... .... .... = Opcode: Standard query (0)
+		.... .0.. .... .... = Authoritative: Server is not an authority for domain
+		.... ..0. .... .... = Truncated: Message is not truncated
+		.... ...1 .... .... = Recursion desired: Do query recursively
+		.... .... 1... .... = Recursion available: Server can do recuersive queries
+		.... .... .0.. .... = Z: reserved (0)
+		.... .... ..0. ... = Answer authenticated: Answer/authority portion was not authenticated by the server
+		.... .... ...0 .... = Non-authenticated data: Unacceptable
+		.... .... .... 0000 = Reply code: No error (0)
+	Questions: 1
+	Answer RRs: 5
+	Authority RRs: 8
+	Additional RRs: 7
+	>Queries
+		>ctldl.windowsupdate.com
+			Name: ctldl.windowsupdate.com
+			[Name Length: 23]
+			[Label Count: 3]
+			Type: (1)
+			Class: (0x0001)
+	>Answers
+		>Name: ctldl.windowsupdate.com
+			Type: (5)
+			Class: (0x0001)
+			Time to live: 1376
+			Data length: 28
+			CNAME: wu-shim.trafficmanager.net
+		>Name
+ 			Type: (5)
+			Class: (0x0001)
+			Time to live: 1365
+			Data length: 39
+			CNAME: download.windowsu.date.com.edgesuite.
+		>Name
+ 			Type: (5)
+			Class: (0x0001)
+			Time to live: 528
+			Data length: 21
+			CNAME: a767.ds.w65.akamai.
+		>Name
+ 			Type: (1)
+			Class: (0x0001)
+			Time to live: 2
+			Data length: 4
+			Address: 23.200.86.161
+		>Name
+ 			Type: (1)
+			Class: (0x0001)
+			Time to live: 2
+			Data length: 4
+			Address: 23.200.86.128
+
+	>Authoritative nameservers
+		>Name: dspw65
+			Type: (2)
+			Class: (0x0001)
+			Time to live: 1131
+			Data length: 11
+			Name server: n7ds.w65.
+		>Name: dspw65
+			Type: (2)
+			Class: (0x0001)
+			Time to live: 1131
+			Data length: 11
+			Name server: n.ds.w65.
+		>Name: dspw65
+			Type: (2)
+			Class: (0x0001)
+			Time to live: 1131
+			Data length: 11
+			Name server: n2ds.w65.
+		>Name: dspw65
+			Type: (2)
+			Class: (0x0001)
+			Time to live: 1131
+			Data length: 11
+			Name server: n3ds.w65.
+		>Name: dspw65
+			Type: (2)
+			Class: (0x0001)
+			Time to live: 1131
+			Data length: 11
+			Name server: n5ds.w65.
+		>Name: dspw65
+			Type: (2)
+			Class: (0x0001)
+			Time to live: 1131
+			Data length: 11
+			Name server: n6ds.w65.
+		>Name: dspw65
+			Type: (2)
+			Class: (0x0001)
+			Time to live: 1131
+			Data length: 11
+			Name server: n4ds.w65.
+		>Name: dspw65
+			Type: (2)
+			Class: (0x0001)
+			Time to live: 1131
+			Data length: 11
+			Name server: n1ds.w65.
+
+	>Additional records
+		>Name
+ 			Type: (1)
+			Class: (0x0001)
+			Time to live: 3481
+			Data length: 4
+			Address: 88.221.81.192
+		>Name
+ 			Type: (28)
+			Class: (0x0001)
+			Time to live: 3481
+			Data length: 16
+			Address: IPv6
+		>Name
+ 			Type: (1)
+			Class: (0x0001)
+			Time to live: 3479
+			Data length: 4
+			Address: 88.221.113.204
+		>Name
+ 			Type: (1)
+			Class: (0x0001)
+			Time to live: 3479
+			Data length: 4
+			Address: 88.221.113.87
+		>Name
+ 			Type: (1)
+			Class: (0x0001)
+			Time to live: 3479
+			Data length: 4
+			Address: 88.221.112.244
+		>Name
+ 			Type: (1)
+			Class: (0x0001)
+			Time to live: 3479
+			Data length: 4
+			Address: 88.221.112.238
+		>Name
+ 			Type: (1)
+			Class: (0x0001)
+			Time to live: 3479
+			Data length: 4
+			Address: 88.221.112.236
+
+
+===========================================================
+
+>Frame 4:  262 bytes (2096 bits)
+>Ethernet II 
+	Destination:  (90:cd:b6:83:0b:42)
+	Source:  (b0:bb:e5:b9:a3:ec)
+	Type: IPv6 (0x86dd)
+
+===========================================================
